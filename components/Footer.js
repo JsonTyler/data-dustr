@@ -1,5 +1,10 @@
+import dynamic from 'next/dynamic';
 import styles from './Footer.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const FontAwesomeIcon = dynamic(() =>
+  import('@fortawesome/react-fontawesome').then(mod => mod.FontAwesomeIcon),
+  { ssr: false }
+);
 
 export default function Footer() {
   return (
