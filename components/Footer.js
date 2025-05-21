@@ -16,7 +16,7 @@ export default function Footer() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/__newsletterForm.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString(),
@@ -50,9 +50,11 @@ export default function Footer() {
         <form
           name="newsletter"
           method="POST"
+          action="/__newsletterForm.html"
           data-netlify="true"
           netlify-honeypot="bot-field"
           className={styles.newsletter}
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="newsletter" />
           <p hidden>
