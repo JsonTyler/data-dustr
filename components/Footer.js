@@ -50,7 +50,6 @@ export default function Footer() {
         <form
           name="newsletter"
           method="POST"
-          action="/"
           data-netlify="true"
           netlify-honeypot="bot-field"
           className={styles.newsletter}
