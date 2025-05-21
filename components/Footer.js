@@ -36,9 +36,9 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerTagline}>Ctrl + Alt + Declutter.</div>
-      <div className={styles.topRow}>
-        <div className={styles.leftGroup}>
+      <div className={styles.content}>
+        <div className={styles.left}>
+          <div className={styles.footerTagline}>Ctrl + Alt + Declutter.</div>
           <div className={styles.socials}>
             <a href="#"><FontAwesomeIcon icon={['fab', 'google']} /></a>
             <a href="#"><FontAwesomeIcon icon={['fab', 'facebook']} /></a>

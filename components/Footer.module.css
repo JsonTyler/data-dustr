@@ -1,13 +1,11 @@
 .footer {
   background-color: #1a1a1a;
   color: white;
-  padding: 0.75rem 1.25rem; /* reduced vertical padding */
-  font-size: 0.85rem;
-  width: 100%;
-  box-sizing: border-box;
+  padding: 1.25rem 1rem;
+  font-size: 0.95rem;
 }
 
-.topRow {
+.content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,32 +13,33 @@
   gap: 1rem;
 }
 
-.leftGroup {
+.left {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex: 1 1 250px;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-.tagline {
-  margin: 0;
-  font-size: 0.9rem;
-  white-space: nowrap;
+.footerTagline {
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .socials {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .socials a {
-  font-size: 1.1rem;
-  color: #ccc;
-  transition: color 0.2s;
+  color: white;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
 }
 
 .socials a:hover {
-  color: white;
+  transform: scale(1.1);
+  color: #be261b;
 }
 
 .newsletter {
@@ -48,54 +47,75 @@
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 .newsletter label {
-  font-weight: 600;
-  font-size: 0.85rem;
-  margin-right: 0.25rem;
+  font-weight: bold;
 }
 
-.newsletter input {
-  padding: 0.4rem 0.6rem;
-  border: none;
+.newsletter input[type="email"] {
+  padding: 0.3rem 0.5rem;
   border-radius: 4px;
-  font-size: 0.85rem;
-  width: 200px;
+  border: none;
+  font-size: 0.9rem;
 }
 
-.newsletter button {
-  padding: 0.4rem 0.9rem;
-  background-color: white;
-  color: #1a1a1a;
+.subscribeButton {
+  padding: 0.3rem 0.8rem;
+  background-color: #be261b;
+  color: white;
   border: none;
   border-radius: 4px;
-  font-size: 0.85rem;
   cursor: pointer;
-}
-
-.newsletter button:hover {
-  background-color: #ddd;
+  height: 2rem;
+  font-size: 0.9rem;
 }
 
 .subscribeButton:hover {
-  background-color: grey;
-  color: black;
+  background-color: white;
+  color: #be261b;
 }
 
 .bottomRow {
-  margin-top: 0.25rem;
+  width: 100%;
   text-align: center;
-  font-size: 0.75rem;
-  color: #999;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 0.75rem;
 }
 
-.bottomRow a {
-  color: #bbb;
-  margin-left: 0.4rem;
-  text-decoration: none;
-}
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 
-.bottomRow a:hover {
-  color: white;
+  .left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .newsletter {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .newsletter input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .subscribeButton {
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .bottomRow {
+    text-align: left;
+  }
 }
