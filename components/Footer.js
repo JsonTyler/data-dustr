@@ -19,10 +19,24 @@ export default function Footer() {
             <a href="#"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
           </div>
         </div>
-        <form className={styles.newsletter}>
+        <form
+          name="newsletter"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          className={styles.newsletter}
+        >
+          {/* Honeypot field to prevent bots */}
+          <input type="hidden" name="form-name" value="newsletter" />
+          <p hidden>
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+
           <label htmlFor="email">Stay updated</label>
-          <input type="email" id="email" placeholder="Email address" />
-          <button type="submit" className={`btn btn-primary ${styles.subscribeButton}`}>Join</button>
+          <input type="email" id="email" name="email" placeholder="Email address" required />
+          <button type="submit" className={`btn btn-primary ${styles.subscribeButton}`}>
+            Join
+          </button>
         </form>
       </div>
       <div className={styles.bottomRow}>
