@@ -12,9 +12,9 @@ function Application({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <div className="app-shell">
       {showOverlay ? <UnderConstructionOverlay /> : <Component {...pageProps} />}
-    </>
+    </div>
   );
 }
 

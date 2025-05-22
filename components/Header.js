@@ -21,9 +21,10 @@ export default function Header() {
         </button>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
-          <Link href="/">Home</Link>
+          <Link href="#top">Home</Link>
           <Link href="#services">Services</Link>
           <Link href="#process">Process</Link>
+          <Link href="#testimonials">Testimonials</Link>
           <Link href="#about">About</Link>
           <Link href="#contact">Contact</Link>
           <Link href="#quote" className={styles.cta}>Get a Quote</Link>
