@@ -4,6 +4,8 @@ import '@styles/globals.css';
 import { useEffect } from 'react';
 import UnderConstructionOverlay from '../components/UnderConstructionOverlay';
 
+const showOverlay = process.env.NEXT_PUBLIC_SHOW_OVERLAY === 'false';
+
 function Application({ Component, pageProps }) {
   useEffect(() => {
     import('bootstrap/dist/js/bootstrap.bundle.min.js');
@@ -11,8 +13,7 @@ function Application({ Component, pageProps }) {
 
   return (
     <>
-      <UnderConstructionOverlay />
-      <Component {...pageProps} />
+      {showOverlay ? <UnderConstructionOverlay /> : <Component {...pageProps} />}
     </>
   );
 }
