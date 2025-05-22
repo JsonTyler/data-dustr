@@ -4,7 +4,7 @@ import '@styles/globals.css';
 import { useEffect } from 'react';
 import UnderConstructionOverlay from '../components/UnderConstructionOverlay';
 
-const showOverlay = process.env.NEXT_PUBLIC_SHOW_OVERLAY === 'false';
+const showOverlay = process.env.NEXT_PUBLIC_SHOW_OVERLAY === 'true';
 
 function Application({ Component, pageProps }) {
   useEffect(() => {
