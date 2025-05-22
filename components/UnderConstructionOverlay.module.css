@@ -83,4 +83,29 @@ opacity: 0.8;
     font-size: 0.9rem;
     margin-top: 0.5rem;
   }
+
+  @media (max-width: 480px){
+    .heading {
+        font-size: 1.3rem;
+    }
+
+    .subheading {
+        font-size: 1rem;
+    }
+
+    .message {
+        font-size: 0.9rem;
+    }
+
+    .logoWrapper {
+        width: 220px;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .mobileNewsletter input[type="email"],
+    .mobileNewsletter button {
+        font-size: 0.95rem;
+    }
+  }
 }
