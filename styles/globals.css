@@ -27,3 +27,13 @@ footer {
   padding: 1rem;
   margin-top: 60px; /* If you want space below a fixed header */
 }
+
+@media (max-width: 767px) {
+  body.has-overlay footer {
+    display: none !important;
+  }
+
+  .footer-global {
+    display: none !important;
+  }
+}

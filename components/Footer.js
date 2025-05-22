@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} footer-global`}>
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.footerTagline}>Ctrl + Alt + Declutter.</div>
