@@ -259,8 +259,8 @@ export default function Home() {
                 required
               />
               <input
-                type="phone"
-                name="phone #"
+                type="tel"
+                name="phone"
                 placeholder="Your phone #"
                 required
               />
@@ -273,7 +273,7 @@ export default function Home() {
                 <option value="Newsletter">Newsletter</option>
                 <option value="Other">Other</option>
               </select>
-              
+
               <textarea
                 name="message"
                 placeholder="What do you need help organizing?"
