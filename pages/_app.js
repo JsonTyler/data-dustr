@@ -3,6 +3,7 @@ import '../lib/fontawesome';
 import '@styles/globals.css';
 import { useEffect } from 'react';
 import UnderConstructionOverlay from '../components/UnderConstructionOverlay';
+import Footer from '../components/Footer';
 
 const showOverlay = process.env.NEXT_PUBLIC_SHOW_OVERLAY === 'true';
 
@@ -13,7 +14,14 @@ function Application({ Component, pageProps }) {
 
   return (
     <div className="app-shell">
-      {showOverlay ? <UnderConstructionOverlay /> : <Component {...pageProps} />}
+      {showOverlay ? (
+        <UnderConstructionOverlay />
+      ) : (
+        <>
+          <Component {...pageProps} />
+          <Footer />
+        </>
+      )}
     </div>
   );
 }

@@ -26,8 +26,7 @@ export default function Header() {
           <Link href="#process">Process</Link>
           <Link href="#testimonials">Testimonials</Link>
           <Link href="#about">About</Link>
-          <Link href="#contact">Contact</Link>
-          <Link href="#quote" className={styles.cta}>Get a Quote</Link>
+          <Link href="#contact" className={styles.cta}>Send a Note</Link>
         </nav>
       </div>
     </header>

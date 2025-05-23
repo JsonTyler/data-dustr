@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 
 export default function Home() {
+  const [toastVisible, setToastVisible] = useState(false);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,6 +25,30 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
+
+  const handleContactSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(form.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
+
+      if (res.ok) {
+        form.reset();
+        setToastVisible(true);
+        setTimeout(() => setToastVisible(false), 3000);
+      } else {
+        console.error("Contact form submission failed:", await res.text());
+      }
+    } catch (err) {
+      console.error("Contact form error:", err);
+    }
+  };
 
   return (
     <>
@@ -184,16 +210,16 @@ export default function Home() {
           <h2 className="section-title">About datadustr</h2>
           <div className="about-content">
             <p>
-              I started datadustr after years of working inside messy systems and 
-              realizing most teams just needed structure — not more software.
-              We don’t build dashboards. We don’t run analytics. We do the work
-              most people avoid — organizing what’s already there.
+              I started datadustr after years of working inside messy systems
+              and realizing most teams just needed structure — not more
+              software. We don’t build dashboards. We don’t run analytics. We do
+              the work most people avoid — organizing what’s already there.
             </p>
             <p>
-              For small teams and solo operators, Datadustr replaces clutter and 
-              confusion with calm, clarity, and a system that stays clean.
-              We’ve seen the chaos — the backups, the duplicates, the
-              “final_final” folders — and we’ve built calm inside it.
+              For small teams and solo operators, datadustr replaces clutter and
+              confusion with calm, clarity, and a system that stays clean. We’ve
+              seen the chaos — the backups, the duplicates, the “final_final”
+              folders — and we’ve built calm inside it.
             </p>
             <p>
               If your digital workspace feels like a junk drawer, we’ll fix
@@ -201,8 +227,72 @@ export default function Home() {
             </p>
           </div>
         </section>
+        <section id="contact" className="section-contact">
+          <h2 className="section-title">Get in Touch</h2>
+          <div className="contact-content">
+            <p className="contact-lead">
+              Whether you need a quote or just want to talk through the mess —
+              I’m here. Send a quick message and I’ll help you make sense of it.
+            </p>
+
+            <form
+              name="contact"
+              method="POST"
+              action="/__contactForm.html"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              className="contact-form"
+              onSubmit={handleContactSubmit}
+            >
+              <input type="hidden" name="form-name" value="contact" />
+              <p hidden>
+                <label>
+                  Don’t fill this out: <input name="bot-field" />
+                </label>
+              </p>
+
+              <input type="text" name="name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+              <input
+                type="phone"
+                name="phone #"
+                placeholder="Your phone #"
+                required
+              />
+
+              <select name="referral" required>
+                <option value="">How did you hear about us?</option>
+                <option value="Search Engine">Search Engine</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Friend or Colleague">Friend or Colleague</option>
+                <option value="Newsletter">Newsletter</option>
+                <option value="Other">Other</option>
+              </select>
+              
+              <textarea
+                name="message"
+                placeholder="What do you need help organizing?"
+                rows="5"
+                required
+              />
+              <button type="submit" className="quote-button">
+                Send Message
+              </button>
+            </form>
+
+            {toastVisible && (
+              <div className="contact-toast">
+                📬 Message sent! I’ll be in touch soon.
+              </div>
+            )}
+          </div>
+        </section>
       </main>
-      <Footer />
     </>
   );
 }

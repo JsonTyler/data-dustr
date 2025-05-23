@@ -38,10 +38,9 @@ export default function Footer() {
     <footer className={`${styles.footer} footer-global`}>
       <div className={styles.content}>
         <div className={styles.left}>
-          <div className={styles.footerTagline}>Ctrl + Alt + Declutter.</div>
+          <div className={styles.footerTagline}>Ctrl + Alt + Declutter</div>
           <div className={styles.socials}>
             <a href="#"><FontAwesomeIcon icon={['fab', 'google']} /></a>
-            <a href="#"><FontAwesomeIcon icon={['fab', 'facebook']} /></a>
             <a href="https://www.instagram.com/datadustr/" target="_blank"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
             <a href="#"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
           </div>
