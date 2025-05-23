@@ -1,3 +1,4 @@
+/* === Base Reset === */
 html, body {
   height: 100%;
   margin: 0;
@@ -6,6 +7,7 @@ html, body {
   color: #fff;
 }
 
+/* === Layout Foundation === */
 #__next {
   height: 100%;
   display: flex;
@@ -22,6 +24,7 @@ main {
   flex: 1;
 }
 
+/* === Header & Footer (use modules if defined separately) === */
 header {
   background-color: #1a1a1a;
   color: white;
@@ -34,6 +37,7 @@ footer {
   padding: 2rem 1rem;
 }
 
+/* === Overlay-related Footer Hiding on Mobile === */
 @media (max-width: 767px) {
   body.has-overlay footer {
     display: none !important;
@@ -44,13 +48,38 @@ footer {
   }
 }
 
-/* index page */
+/* === Shared Section Base === */
+.section-about,
+.section-contact,
+.section-process,
+.section-services,
+.section-testimonials,
+.section-problem {
+  background-color: #0f0f0f;
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-text {
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* === Hero Section === */
 .hero-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0f0f0f;
-  color: #fff;
   padding: 4rem 1rem;
   text-align: center;
 }
@@ -100,34 +129,7 @@ footer {
   }
 }
 
-.section-problem {
-  background-color: #0f0f0f;
-  color: #eee;
-  padding: 4rem 1rem;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.section-text {
-  font-size: 1.15rem;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.85;
-  line-height: 1.6;
-}
-
-.section-services {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 4rem 1rem 6rem;
-  text-align: center;
-}
-
+/* === Services Section === */
 .services-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -163,14 +165,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* processes section */
-.section-process {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 6rem 1rem;
-  text-align: center;
-}
-
+/* === Process Section === */
 .process-wrapper {
   display: flex;
   justify-content: center;
@@ -185,7 +180,6 @@ footer {
   max-width: 800px;
   margin: 3rem auto 0;
 }
-
 
 .process-step {
   background-color: #1a1a1a;
@@ -239,14 +233,7 @@ footer {
   line-height: 1.6;
 }
 
-/* testimonials section */
-.section-testimonials {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 6rem 1rem;
-  text-align: center;
-}
-
+/* === Testimonials Section === */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -285,35 +272,8 @@ footer {
   color: #888;
 }
 
-/* about section */
-.section-about {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 5rem 1rem;
-  text-align: center;
-}
-
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  opacity: 0.9;
-  text-align: left;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-/* contact section */
-.section-contact {
-  background-color: #0f0f0f;
-  color: #fff;
-  padding: 5rem 1rem;
-  text-align: center;
-}
-
+/* === About & Contact Sections === */
+.about-content,
 .contact-content {
   max-width: 800px;
   margin: 0 auto;
@@ -327,6 +287,7 @@ footer {
   gap: 1.5rem;
 }
 
+/* === Contact Form === */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -335,7 +296,8 @@ footer {
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   background-color: #1a1a1a;
   color: #fff;
   border: none;
@@ -355,6 +317,17 @@ footer {
   resize: vertical;
 }
 
+.contact-form select {
+  color: #cccccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(190, 38, 27, 0.4);
+}
+
 .quote-button {
   background-color: #be261b;
   color: white;
@@ -370,22 +343,4 @@ footer {
 .quote-button:hover {
   background-color: white;
   color: #be261b;
-}
-
-.contact-form select {
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 4px;
-  border: none;
-  font-size: 1rem;
-  background-color: #1a1a1a;
-  color: #cccccc;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus,
-.contact-form select:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #be261b;
-  box-shadow: 0 0 0 2px rgba(190, 38, 27, 0.4);
 }

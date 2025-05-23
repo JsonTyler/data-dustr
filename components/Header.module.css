@@ -1,12 +1,14 @@
+/* Sticky Header */
 .header {
   background-color: #1a1a1a;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #be261b;
+  border-bottom: 1px solid #be261b
 }
 
+/* Header Container */
 .container {
   width: 100%;
   padding: 0.15rem;
@@ -15,28 +17,33 @@
   justify-content: space-between;
 }
 
+/* Logo Image */
 .logo {
   height: 40px;
   width: 200px;
 }
 
+/* Navigation Layout */
 .nav {
   display: flex;
   gap: 1.5rem;
   align-items: center;
 }
 
+/* Nav Links (Shared) */
 .nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
 }
 
+/* Nav Link Hover (Non-CTA) */
 .nav a:hover:not(.cta) {
   color: #be261b;
   border-bottom: 1px solid white;
 }
 
+/* CTA Button Link */
 .cta {
   background: #951108;
   color: black;
@@ -45,11 +52,13 @@
   font-weight: bold;
 }
 
+/* CTA Hover Effect */
 .cta:hover {
   background-color: white;
   color: #be261b;
 }
 
+/* Mobile Menu Toggle Button */
 .menuToggle {
   display: none;
   font-size: 1.5rem;
@@ -59,6 +68,7 @@
   cursor: pointer;
 }
 
+/* Mobile Navigation */
 @media (max-width: 768px) {
   .nav {
     display: none;

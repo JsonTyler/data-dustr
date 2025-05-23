@@ -1,3 +1,4 @@
+/* Footer Base */
 .footer {
   background-color: #1a1a1a;
   color: white;
@@ -6,6 +7,7 @@
   border-top: 1px solid #be261b;
 }
 
+/* Layout Wrapper */
 .content {
   display: flex;
   justify-content: space-between;
@@ -14,6 +16,7 @@
   gap: 1rem;
 }
 
+/* Left Section: Tagline + Socials */
 .left {
   display: flex;
   align-items: center;
@@ -21,11 +24,13 @@
   flex-wrap: wrap;
 }
 
+/* Tagline */
 .footerTagline {
   font-weight: 600;
   font-size: 0.95rem;
 }
 
+/* Social Icons */
 .socials {
   display: flex;
   gap: 0.5rem;
@@ -43,6 +48,7 @@
   color: #be261b;
 }
 
+/* Newsletter Form */
 .newsletter {
   display: flex;
   align-items: center;
@@ -62,6 +68,7 @@
   font-size: 0.9rem;
 }
 
+/* Subscribe Button */
 .subscribeButton {
   padding: 0.3rem 0.8rem;
   background-color: #be261b;
@@ -78,6 +85,7 @@
   color: #be261b;
 }
 
+/* Footer Bottom Row */
 .bottomRow {
   width: 100%;
   text-align: center;
@@ -86,7 +94,7 @@
   margin-top: 0.75rem;
 }
 
-/* Responsive Tweaks */
+/* ---------- Responsive Tweaks ---------- */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
