@@ -61,120 +61,138 @@ export default function Home() {
       <main className="main-content">
         <section id="top" className="hero-section">
           <div className="hero-container">
-            <h1 className="hero-title">Ctrl + Alt + Declutter</h1>
+            <h1 className="hero-title">We Clean Up the Messy Side of Genealogy.</h1>
             <p className="hero-subtitle">
-              Silence the noise. Streamline what matters.
+              Finding records, building trees, preparing for citizenship — 
+              <br/>
+              done with structure, digital tools, and real human help.
             </p>
             <a href="#quote" className="hero-button">
-              Let’s Organize
+              Find My Roots
             </a>
           </div>
         </section>
 
+        <hr class="section-divider"></hr>
+
         <section className="section-problem">
           <h2 className="section-title">
-            Your data is everywhere. We bring it together.
+            From Records to Roots — Order from Chaos.
           </h2>
           <p className="section-text">
-            Spreadsheets, APIs, dashboards, warehouses — your data is scattered
-            across platforms and people. DataDustr cuts through the noise,
-            giving you structure, governance, and clarity in one unified system.
+            Most family stories are buried in scattered records, 
+            confusing documents, or forgotten corners of the internet.
+            We help you uncover the truth — and bring clarity to your family 
+            tree, your citizenship paperwork, and your digital archive.
           </p>
         </section>
         <section id="services" className="section-services">
           <div className="services-container">
-            <h2 className="section-title">What We Do</h2>
+            <h2 className="section-title">Genealogy Services</h2>
             <div className="services-grid">
               <div className="service-card">
-                <div className="service-icon">🧾</div>
-                <h3>Paper-to-Digital Organization</h3>
+                <div className="service-icon">🔎</div>
+                <h3>Genealogy Record Search</h3>
                 <p>
-                  We help transform physical records, scattered files, and messy
-                  systems into clean, organized digital structures — ready to
-                  scale.
+                  We locate historical birth, marriage, baptism, census, and immigration records using national and international archives.
                 </p>
               </div>
 
               <div className="service-card">
-                <div className="service-icon">🗂️</div>
-                <h3>Smart Structuring</h3>
+                <div className="service-icon">🌳</div>
+                <h3>Family Tree Building</h3>
                 <p>
-                  We design naming conventions, folder systems, and templates so
-                  your digital workspace stays organized and easy to maintain.
+                  Starting from what you know, we build or expand your family tree with sourced records and clear connections — no guesswork.
                 </p>
               </div>
 
               <div className="service-card">
-                <div className="service-icon">📊</div>
-                <h3>Custom Tools & Templates</h3>
+                <div className="service-icon">🛂</div>
+                <h3>Citizenship Paperwork Prep</h3>
                 <p>
-                  Need a spreadsheet that does the math for you? We build light
-                  tools with formulas, automation, and structure tailored to
-                  your workflow.
+                  We organize, format, and explain the documents you’ll need for dual citizenship applications — so nothing’s missing at your consulate.
                 </p>
               </div>
 
               <div className="service-card">
-                <div className="service-icon">🔁</div>
-                <h3>Ongoing Maintenance</h3>
+                <div className="service-icon">🌍</div>
+                <h3>Translation & Interpretation</h3>
                 <p>
-                  Organization isn’t one-and-done. We offer flexible maintenance
-                  to keep your systems running clean — and your files exactly
-                  where you expect.
+                  We translate and interpret documents in Spanish, Portuguese, and more — including hard-to-read handwriting or church records.
                 </p>
               </div>
 
               <div className="service-card">
-                <div className="service-icon">📥</div>
-                <h3>Inbox Zero Systems</h3>
+                <div className="service-icon">📁</div>
+                <h3>Digital Archive Setup</h3>
                 <p>
-                  We create filing systems for email and document intake so
-                  nothing slips through and everything finds its place.
+                  We create simple, shareable folder systems and naming templates to keep your records clean, accessible, and future-proof.
                 </p>
               </div>
 
               <div className="service-card">
-                <div className="service-icon">📅</div>
-                <h3>Workflow Simplification</h3>
+                <div className="service-icon">🧭</div>
+                <h3>1-on-1 Research Coaching</h3>
                 <p>
-                  We help identify and eliminate busywork in your digital
-                  processes using light automation and smart file flows.
+                  Need guidance? We’ll meet you on Zoom to review your goals, assess roadblocks, and create a step-by-step action plan.
                 </p>
               </div>
             </div>
           </div>
         </section>
         <section id="process" className="section-process">
-          <h2 className="section-title">How We Work</h2>
+          <h2 className="section-title">How It Works</h2>
           <div className="process-wrapper">
             <div className="process-timeline">
-              {["Discovery", "Audit", "Digitize", "Structure", "Maintain"].map(
-                (title, i) => (
-                  <div className="process-step" key={i}>
-                    <div className="step-number">{i + 1}</div>
-                    <div className="step-content">
-                      <h3 className="step-title">{title}</h3>
-                      <p className="step-desc">
-                        {
-                          {
-                            Discovery:
-                              "We listen. We learn what’s messy, what’s manual, and what’s holding you back.",
-                            Audit:
-                              "We review every folder, drawer, spreadsheet and process to map the chaos.",
-                            Digitize:
-                              "We transform clutter into clean, usable digital files, ready for structure.",
-                            Structure:
-                              "We create folders, naming rules, templates — the system that makes sense.",
-                            Maintain:
-                              "We offer optional maintenance to keep your world decluttered and on track.",
-                          }[title]
-                        }
-                      </p>
-                    </div>
+              {[
+                "Discovery",
+                "Record Search",
+                "Translation & Review",
+                "Tree + Archive Build",
+                "Support + Follow-Up",
+              ].map((title, i) => (
+                <div className="process-step" key={i}>
+                  <div className="step-number">{i + 1}</div>
+                  <div className="step-content">
+                    <h3 className="step-title">{title}</h3>
+                    <p className="step-desc">
+                      {{
+                        Discovery:
+                          "We start by learning your goals — whether it's building your family tree, applying for citizenship, or uncovering lost records.",
+                        "Record Search":
+                          "We dig into archives, databases, and family leads to track down birth, marriage, immigration, and church documents.",
+                        "Translation & Review":
+                          "We interpret old documents (including Spanish, Portuguese, messy handwriting, etc) so you understand what you have — and what’s missing.",
+                        "Tree + Archive Build":
+                          "We organize your records into a clean family tree and structured digital archive you can actually use — or submit to a consulate.",
+                        "Support + Follow-Up":
+                          "We guide you through next steps, offer optional coaching, and keep your archive accessible as your research grows.",
+                      }[title]}
+                    </p>
                   </div>
-                )
-              )}
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
+        <section id="about" className="section-about">
+          <h2 className="section-title">About Datadustr</h2>
+          <div className="about-content">
+            <p>
+              I started Datadustr while digging through church records and family documents to apply for my own dual citizenship. The process was confusing, scattered, and full of dead ends — and I realized others were stuck in the same mess.
+            </p>
+            <p>
+              Datadustr exists to bring structure to family history. Whether you're applying for citizenship, exploring your roots, or just trying to make sense of what you inherited, we help you find the records, understand what they mean, and keep it all organized.
+            </p>
+            <p>
+              We don't offer generic tree builders or vague templates. We do the real work — searching archives, translating old documents, building clean digital trees, and preparing your paperwork so you're ready for whatever comes next.
+            </p>
+            <p>
+              Some clients come to us with nothing but a name and a country. Others have folders of scanned documents they’ve never fully processed. No matter where you're starting from, we make sense of the mess, identify what matters, and structure it clearly — so your family history isn't just collected, it's understood.
+            </p>
+            <p>
+              At its core, Datadustr is about dusting off the forgotten, the misfiled, and the nearly-lost — and turning it into something real. Something you can share. Something that gives you answers.
+            </p>
           </div>
         </section>
         <section id="testimonials" className="section-testimonials">
@@ -182,57 +200,64 @@ export default function Home() {
           <div className="testimonial-grid">
             <div className="testimonial-card">
               <p className="quote">
-                “We sent them a Google Drive that looked like a crime scene. A
-                few days later, it was clean, labeled, and totally usable.
-                Game-changing.”
+                “Datadustr found my grandfather’s immigration record in under a week — something I’d been searching for for years.”
               </p>
-              <p className="author">— Erin Castillo, Project Lead</p>
+              <p className="author">— Ana Morales, Citizenship Applicant</p>
             </div>
 
             <div className="testimonial-card">
               <p className="quote">
-                “I didn’t even know what we had until they showed it to us
-                properly. Their systems saved us hours a week — and my sanity.”
+                “I gave them scanned baptism records, family notes, and a bunch of guesses. They gave me a verified family tree and a folder system that makes sense.”
               </p>
-              <p className="author">— Marcus Shah, Co-Founder</p>
+              <p className="author">— Devon Liu, Genealogy Client</p>
             </div>
 
             <div className="testimonial-card">
               <p className="quote">
-                “Before datadustr, I had 14 folders called ‘final-v2’. Now we’ve
-                got structure, flow, and zero confusion.”
+                “Our consulate appointment would’ve been a disaster without Datadustr. They translated everything, named it properly, and caught what we were missing.”
               </p>
-              <p className="author">— Nina Alvarez, Content Strategist</p>
+              <p className="author">— Maria & Joel Thompson, Dual Citizenship Applicants</p>
             </div>
           </div>
         </section>
-        <section id="about" className="section-about">
-          <h2 className="section-title">About datadustr</h2>
-          <div className="about-content">
-            <p>
-              I started datadustr after years of working inside messy systems
-              and realizing most teams just needed structure — not more
-              software. We don’t build dashboards. We don’t run analytics. We do
-              the work most people avoid — organizing what’s already there.
-            </p>
-            <p>
-              For small teams and solo operators, datadustr replaces clutter and
-              confusion with calm, clarity, and a system that stays clean. We’ve
-              seen the chaos — the backups, the duplicates, the “final_final”
-              folders — and we’ve built calm inside it.
-            </p>
-            <p>
-              If your digital workspace feels like a junk drawer, we’ll fix
-              that. And we’ll make sure it stays fixed.
-            </p>
+        <section id="faq" className="section-faq">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="faq-container">
+            {[
+              {
+                q: "What kind of records can you find?",
+                a: "We locate birth, marriage, death, immigration, and church records—plus any supporting documentation for citizenship or genealogy work.",
+              },
+              {
+                q: "Can you help me apply for dual citizenship?",
+                a: "Yes. We help you gather and organize the records you need for your application—structured, translated (if needed), and ready to submit.",
+              },
+              {
+                q: "What if I only have part of the information?",
+                a: "No problem. We’ll start with whatever details you have and use archives, databases, and clues to uncover the rest.",
+              },
+              {
+                q: "How do I get started?",
+                a: "Just send a message through the contact form. We’ll talk through your goals and give you a personalized quote.",
+              },
+              {
+                q: "Do you offer ongoing help?",
+                a: "Yes. We offer optional ongoing support to help you maintain a clean and organized digital archive, even after the initial setup.",
+              },
+            ].map(({ q, a }, i) => (
+              <details key={i} className="faq-item">
+                <summary className="faq-question">{q}</summary>
+                <p className="faq-answer">{a}</p>
+              </details>
+            ))}
           </div>
         </section>
         <section id="contact" className="section-contact">
           <h2 className="section-title">Get in Touch</h2>
           <div className="contact-content">
             <p className="contact-lead">
-              Whether you need a quote or just want to talk through the mess —
-              I’m here. Send a quick message and I’ll help you make sense of it.
+              Whether you’re stuck on a record, applying for citizenship, or just don’t know where to start — I’m here.
+              Send a quick message and I’ll help you figure out what’s next.
             </p>
 
             <form
@@ -276,7 +301,7 @@ export default function Home() {
 
               <textarea
                 name="message"
-                placeholder="What do you need help organizing?"
+                placeholder="What’s your goal — citizenship, family tree, or something else?"
                 rows="5"
                 required
               />

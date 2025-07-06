@@ -22,11 +22,12 @@ export default function Header() {
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
           <Link href="#top">Home</Link>
-          <Link href="#services">Services</Link>
-          <Link href="#process">Process</Link>
+          <Link href="#services">Genealogy Services</Link>
+          <Link href="#process">How It Works</Link>
+          <Link href="#about">About + My Story</Link>
+          <Link href="#faq">FAQ</Link>
           <Link href="#testimonials">Testimonials</Link>
-          <Link href="#about">About</Link>
-          <Link href="#contact" className={styles.cta}>Send a Note</Link>
+          <Link href="#contact" className={styles.cta}>Get Started</Link>
         </nav>
       </div>
     </header>
