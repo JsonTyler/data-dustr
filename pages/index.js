@@ -53,7 +53,25 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>datadustr</title>
+        <title>DataDustr – Genealogy Research, Tree Building & Citizenship Help</title>
+        <meta name="description" content="DataDustr helps you uncover family history, find genealogy records, and prepare citizenship documents with structure and support." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="UTF-8" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://datadustr.com/" />
+        <meta property="og:title" content="DataDustr – Genealogy Research, Tree Building & Citizenship Help" />
+        <meta property="og:description" content="From record searches to digital archives, DataDustr helps you organize your family history and citizenship documents clearly and efficiently." />
+        <meta property="og:image" content="https://datadustr.com/social-preview.jpg" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://datadustr.com/" />
+        <meta name="twitter:title" content="DataDustr – Genealogy Research, Tree Building & Citizenship Help" />
+        <meta name="twitter:description" content="From record searches to digital archives, DataDustr helps you organize your family history and citizenship documents clearly and efficiently." />
+        <meta name="twitter:image" content="https://datadustr.com/social-preview.jpg" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -73,7 +91,7 @@ export default function Home() {
           </div>
         </section>
 
-        <hr class="section-divider"></hr>
+        <hr className="section-divider"></hr>
 
         <section className="section-problem">
           <h2 className="section-title">
