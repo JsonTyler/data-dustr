@@ -5,6 +5,9 @@ html, body {
   padding: 0;
   background-color: #0f0f0f;
   color: #fff;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 /* === Layout Foundation === */
