@@ -63,14 +63,14 @@ export default function Home() {
         <meta property="og:url" content="https://datadustr.com/" />
         <meta property="og:title" content="DataDustr – Genealogy Research, Tree Building & Citizenship Help" />
         <meta property="og:description" content="From record searches to digital archives, DataDustr helps you organize your family history and citizenship documents clearly and efficiently." />
-        <meta property="og:image" content="https://datadustr.com/social-preview.jpg" />
+        <meta property="og:image" content="https://datadustr.com/social-preview.png" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://datadustr.com/" />
         <meta name="twitter:title" content="DataDustr – Genealogy Research, Tree Building & Citizenship Help" />
         <meta name="twitter:description" content="From record searches to digital archives, DataDustr helps you organize your family history and citizenship documents clearly and efficiently." />
-        <meta name="twitter:image" content="https://datadustr.com/social-preview.jpg" />
+        <meta name="twitter:image" content="https://datadustr.com/social-preview.png" />
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
