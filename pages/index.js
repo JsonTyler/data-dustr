@@ -41,6 +41,14 @@ export default function Home() {
       if (res.ok) {
         form.reset();
         setToastVisible(true);
+
+        // ✅ GA4 event tracking
+        if (typeof gtag === 'function') {
+          gtag('event', 'contact_form_submit', {
+            event_category: 'Contact',
+            event_label: 'Contact Form Submitted',
+          });
+        }
         setTimeout(() => setToastVisible(false), 3000);
       } else {
         console.error("Contact form submission failed:", await res.text());
