@@ -80,9 +80,12 @@ export default function Home() {
         <meta name="twitter:description" content="From record searches to digital archives, DataDustr helps you organize your family history and citizenship documents clearly and efficiently." />
         <meta name="twitter:image" content="https://datadustr.com/social-preview.png" />
 
+        {/* Icons for Android/Apple home screen icons  */}
+        <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="icon" href="/favicon.ico" />
 
+        {/* Structured data schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
