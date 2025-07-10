@@ -316,7 +316,7 @@ export default function Home() {
                 required
               />
 
-              <label htmlFor="referral">How did you hear about us?</label>
+              <label htmlFor="referral" className="sr-only">How did you hear about us?</label>
               <select id="referral" name="referral" required>
                 <option value="">How did you hear about us?</option>
                 <option value="Search Engine">Search Engine</option>
