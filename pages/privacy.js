@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
 
       <h2 style={{ fontSize: "1.5rem", color: "#BE261C" }}>Newsletter & Emails</h2>
       <p>
-        If you subscribe to updates, your name and email are stored securely via our email provider (like Substack).
+        If you subscribe to updates, your name and email are stored securely via our email provider.
         You can unsubscribe anytime — no guilt, no questions asked.
       </p>
 
@@ -61,10 +61,11 @@ export default function PrivacyPolicy() {
       </p>
 
       <h2 style={{ fontSize: "1.5rem", color: "#BE261C" }}>Need to Reach Us?</h2>
-      <p>
+        <p>
         Want your data removed? Have questions? Just{" "}
-        <a href="/" style={{ color: "#BE261C" }}>contact us here</a>. We’ll respond like real humans.
-      </p>
+        <a href="mailto:datadustr@gmail.com" style={{ color: "#BE261C" }}>email us</a>{" "}
+        or <a href="/" style={{ color: "#BE261C" }}>contact us here</a>. We’ll respond like real humans.
+        </p>
     </main>
   );
 }

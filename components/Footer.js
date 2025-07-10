@@ -71,7 +71,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottomRow}>
-        © 2025 DataDustr · <a href="/privacy" aria-label="privacy nav link" style={{ color: '#BE261C', textDecoration: 'none' }} />
+        © 2025 DataDustr · <a href="/privacy" aria-label="privacy nav link" style={{ color: '#BE261C', textDecoration: 'none', fontWeight: 'bold' }}>Privacy</a>
       </div>
 
       {toastVisible && (
