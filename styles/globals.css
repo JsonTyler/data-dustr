@@ -1,6 +1,7 @@
 /* === Base Reset === */
 html, body {
-  height: 100%;
+  height: auto; /* instead of 100% */
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #0f0f0f;
@@ -8,11 +9,12 @@ html, body {
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* === Layout Foundation === */
 #__next {
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
 }
