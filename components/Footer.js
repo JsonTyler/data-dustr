@@ -70,7 +70,9 @@ export default function Footer() {
         </form>
       </div>
 
-      <div className={styles.bottomRow}>© 2025 datadustr</div>
+      <div className={styles.bottomRow}>
+        © 2025 DataDustr · <a href="/privacy" style={{ color: '#BE261C', textDecoration: 'none' }}></a>
+      </div>
 
       {toastVisible && (
         <div style={{
