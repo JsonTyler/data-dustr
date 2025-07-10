@@ -81,6 +81,23 @@ export default function Home() {
         <meta name="twitter:image" content="https://datadustr.com/social-preview.png" />
 
         <link rel="icon" href="/favicon.ico" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "DataDustr",
+              "url": "https://datadustr.com",
+              "logo": "https://datadustr.com/datadustrWhitePlainSvg.svg",
+              "sameAs": [
+                "https://www.instagram.com/datadustr"
+              ]
+            }),
+          }}
+        />
+
       </Head>
 
       <Header />
