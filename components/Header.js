@@ -21,13 +21,13 @@ export default function Header() {
         </button>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
-          <Link href="#top">Home</Link>
-          <Link href="#services">Genealogy Services</Link>
-          <Link href="#process">How It Works</Link>
-          <Link href="#about">About + My Story</Link>
-          <Link href="#faq">FAQ</Link>
-          <Link href="#testimonials">Testimonials</Link>
-          <Link href="#contact" className={styles.cta}>Get Started</Link>
+          <Link href="#top" aria-label="home menu link">Home</Link>
+          <Link href="#services" aria-label="services menu link">Genealogy Services</Link>
+          <Link href="#process" aria-label="process menu link">How It Works</Link>
+          <Link href="#about" aria-label="about menu link">About + My Story</Link>
+          <Link href="#faq" aria-label="faq menu link">FAQ</Link>
+          <Link href="#testimonials" aria-label="testimonials">Testimonials</Link>
+          <Link href="#contact" className={styles.cta} aria-label="contact">Get Started</Link>
         </nav>
       </div>
     </header>

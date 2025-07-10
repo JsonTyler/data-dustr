@@ -93,7 +93,7 @@ export default function Home() {
               <br/>
               done with structure, digital tools, and real human help.
             </p>
-            <a href="#quote" className="hero-button">
+            <a href="#contact" className="hero-button" aria-label="Find My Roots – Go to contact form to request help with your family history">
               Find My Roots
             </a>
           </div>
@@ -316,7 +316,8 @@ export default function Home() {
                 required
               />
 
-              <select name="referral" required>
+              <label htmlFor="referral">How did you hear about us?</label>
+              <select id="referral" name="referral" required>
                 <option value="">How did you hear about us?</option>
                 <option value="Search Engine">Search Engine</option>
                 <option value="Social Media">Social Media</option>

@@ -42,9 +42,9 @@ export default function Footer() {
             <span role="img" aria-label="tree roots">🌱</span> Where records become roots
           </div>
           <div className={styles.socials}>
-            <a href="#"><FontAwesomeIcon icon={['fab', 'google']} /></a>
-            <a href="https://www.instagram.com/datadustr/" target="_blank"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
-            <a href="#"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+            <a href="#" aria-label="Google"><FontAwesomeIcon icon={['fab', 'google']} /></a>
+            <a href="https://www.instagram.com/datadustr/" target="_blank" aria-label="Instagram"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
+            <a href="#" aria-label="LinkedIn"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
           </div>
         </div>
 
