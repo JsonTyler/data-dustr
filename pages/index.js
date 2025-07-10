@@ -302,19 +302,14 @@ export default function Home() {
                 </label>
               </p>
 
+              <label htmlFor="name" className="sr-only">Your name</label>
               <input type="text" name="name" placeholder="Your name" required />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                placeholder="Your phone #"
-                required
-              />
+
+              <label htmlFor="email" className="sr-only">Your email</label>
+              <input type="email" name="email" placeholder="Your email" required />
+
+              <label htmlFor="phone" className="sr-only">Your phone #</label>
+              <input type="tel" name="phone" placeholder="Your phone #" required />
 
               <label htmlFor="referral" className="sr-only">How did you hear about us?</label>
               <select id="referral" name="referral" required>
@@ -326,13 +321,10 @@ export default function Home() {
                 <option value="Other">Other</option>
               </select>
 
-              <textarea
-                name="message"
-                placeholder="What’s your goal — citizenship, family tree, or something else?"
-                rows="5"
-                required
-              />
-              <button type="submit" className="quote-button">
+              <label htmlFor="message" className="sr-only">Your message</label>
+              <textarea name="message" placeholder="What’s your goal — citizenship, family tree, or something else?" rows="5" required />
+              
+              <button type="submit" className="quote-button" aria-label="submit button">
                 Send Message
               </button>
             </form>
