@@ -1,6 +1,17 @@
+import Head from 'next/head';
+
 export default function PrivacyPolicy() {
   return (
-    <main style={{
+    <>
+    <Head>
+      <title>Privacy Policy | DataDustr</title>
+      <meta
+        name="description"
+        content="Learn what we collect, why we collect it, and how we protect your data. No jargon. No tricks."
+      />
+      <meta name="robots" content="index,follow" />
+    </Head>
+    <main id="main-content" style={{
       backgroundColor: "#0f0f0f",
       color: "#ffffff",
       fontFamily: "system-ui, sans-serif",
@@ -67,5 +78,6 @@ export default function PrivacyPolicy() {
         or <a href="/" style={{ color: "#BE261C" }}>contact us here</a>. We’ll respond like real humans.
         </p>
     </main>
+    </>
   );
 }
