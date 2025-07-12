@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from "@components/Header";
 
 export default function PrivacyPolicy() {
   return (
@@ -11,6 +12,9 @@ export default function PrivacyPolicy() {
       />
       <meta name="robots" content="index,follow" />
     </Head>
+
+    <Header />
+
     <main id="main-content" style={{
       backgroundColor: "#0f0f0f",
       color: "#ffffff",
