@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import styles from './Footer.module.css';
+import { useRouter } from 'next/router';
 
 const FontAwesomeIcon = dynamic(() =>
   import('@fortawesome/react-fontawesome').then(mod => mod.FontAwesomeIcon),
@@ -8,7 +9,13 @@ const FontAwesomeIcon = dynamic(() =>
 );
 
 export default function Footer() {
+  const router = useRouter();
+  const hideOnPages = ['/book'];
   const [toastVisible, setToastVisible] = useState(false);
+
+  if (hideOnPages.includes(router.pathname)) {
+    return null;
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
