@@ -13,7 +13,7 @@ export default function Home() {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
           } else {
-            entry.target.classList.remove("visible"); // 👈 allows re-triggering
+            entry.target.classList.remove("visible");
           }
         });
       },
@@ -115,8 +115,8 @@ export default function Home() {
               <br/>
               done with structure, digital tools, and real human help.
             </p>
-            <a href="#contact" className="hero-button" aria-label="Find My Roots – Go to contact form to request help with your family history">
-              Find My Roots
+            <a href="/book" className="hero-button" aria-label="Book a free consultation">
+              Book a Free Consult
             </a>
           </div>
         </section>
