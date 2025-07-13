@@ -151,16 +151,6 @@ footer {
   padding: 0 1rem;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .service-card {
   background-color: #1a1a1a;
   padding: 2rem 1rem;
@@ -168,11 +158,34 @@ footer {
   border: 1px solid #333;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: white;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 16px rgba(255, 0, 60, 0.3);
+}
+
+.service-card a {
+  text-decoration: none;
+}
+
+.service-card a:hover {
+  text-decoration: none;
+}
+
+.service-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.5rem;
+  color: #ffffff;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.service-card:hover h3 {
+  color: #ff5c5c;
 }
 
 .service-icon {

@@ -10,7 +10,7 @@ const FontAwesomeIcon = dynamic(() =>
 
 export default function Footer() {
   const router = useRouter();
-  const hideOnPages = ['/book'];
+  const hideOnPages = ['/consult', '/record-request', '/translation', '/tree-setup', '/citizenship-prep', '/digital-archive'];
   const [toastVisible, setToastVisible] = useState(false);
 
   if (hideOnPages.includes(router.pathname)) {

@@ -115,7 +115,7 @@ export default function Home() {
               <br/>
               done with structure, digital tools, and real human help.
             </p>
-            <a href="/book" className="hero-button" aria-label="Book a free consultation">
+            <a href="/consult" className="hero-button" aria-label="Book a free consultation">
               Book a Free Consult
             </a>
           </div>
@@ -135,55 +135,48 @@ export default function Home() {
           </p>
         </section>
         <section id="services" className="section-services">
-          <div className="services-container">
+          <div className="services-container container">
             <h2 className="section-title">Genealogy Services</h2>
-            <div className="services-grid">
-              <div className="service-card">
-                <div className="service-icon">🔎</div>
-                <h3>Genealogy Record Search</h3>
-                <p>
-                  We locate historical birth, marriage, baptism, census, and immigration records using national and international archives.
-                </p>
+
+            <div className="row justify-content-center g-4 mt-4">
+              <div className="col-12 col-sm-6 col-lg-4 d-flex">
+                <a href="/record-request" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="service-icon">🔎</div>
+                  <h3>Genealogy Record Search</h3>
+                  <p>We locate historical birth, marriage, baptism, census, and immigration records using national and international archives.</p>
+                </a>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">🌳</div>
-                <h3>Family Tree Building</h3>
-                <p>
-                  Starting from what you know, we build or expand your family tree with sourced records and clear connections — no guesswork.
-                </p>
+              <div className="col-12 col-sm-6 col-lg-4 d-flex">
+                <a href="/tree-setup" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="service-icon">🌳</div>
+                  <h3>Family Tree Building</h3>
+                  <p>Starting from what you know, we build or expand your family tree with sourced records and clear connections — no guesswork.</p>
+                </a>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">🛂</div>
-                <h3>Citizenship Paperwork Prep</h3>
-                <p>
-                  We organize, format, and explain the documents you’ll need for dual citizenship applications — so nothing’s missing at your consulate.
-                </p>
+              <div className="col-12 col-sm-6 col-lg-4 d-flex">
+                <a href="/citizenship-prep" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="service-icon">🛂</div>
+                  <h3>Citizenship Paperwork Prep</h3>
+                  <p>We organize, format, and explain the documents you’ll need for dual citizenship applications — so nothing’s missing at your consulate.</p>
+                </a>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">🌍</div>
-                <h3>Translation & Interpretation</h3>
-                <p>
-                  We translate and interpret documents in Spanish, Portuguese, and more — including hard-to-read handwriting or church records.
-                </p>
+              <div className="col-12 col-sm-6 col-lg-4 d-flex">
+                <a href="/translation" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="service-icon">🌍</div>
+                  <h3>Translation & Interpretation</h3>
+                  <p>We translate and interpret documents in Spanish, Portuguese, and more — including hard-to-read handwriting or church records.</p>
+                </a>
               </div>
 
-              <div className="service-card">
-                <div className="service-icon">📁</div>
-                <h3>Digital Archive Setup</h3>
-                <p>
-                  We create simple, shareable folder systems and naming templates to keep your records clean, accessible, and future-proof.
-                </p>
-              </div>
-
-              <div className="service-card">
-                <div className="service-icon">🧭</div>
-                <h3>1-on-1 Research Coaching</h3>
-                <p>
-                  Need guidance? We’ll meet you on Zoom to review your goals, assess roadblocks, and create a step-by-step action plan.
-                </p>
+              <div className="col-12 col-sm-6 col-lg-4 d-flex">
+                <a href="/digital-archive" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="service-icon">📁</div>
+                  <h3>Digital Archive Setup</h3>
+                  <p>We create simple, shareable folder systems and naming templates to keep your records clean, accessible, and future-proof.</p>
+                </a>
               </div>
             </div>
           </div>
