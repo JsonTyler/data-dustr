@@ -144,6 +144,7 @@ export default function Home() {
                   <div className="service-icon">🔎</div>
                   <h3>Genealogy Record Search</h3>
                   <p>We locate historical birth, marriage, baptism, census, and immigration records using national and international archives.</p>
+                  <button className="book">Book Now</button>
                 </a>
               </div>
 
@@ -152,6 +153,7 @@ export default function Home() {
                   <div className="service-icon">🌳</div>
                   <h3>Family Tree Building</h3>
                   <p>Starting from what you know, we build or expand your family tree with sourced records and clear connections — no guesswork.</p>
+                  <button className="book">Book Now</button>
                 </a>
               </div>
 
@@ -160,6 +162,7 @@ export default function Home() {
                   <div className="service-icon">🛂</div>
                   <h3>Citizenship Paperwork Prep</h3>
                   <p>We organize, format, and explain the documents you’ll need for dual citizenship applications — so nothing’s missing at your consulate.</p>
+                  <button className="book">Book Now</button>
                 </a>
               </div>
 
@@ -168,6 +171,7 @@ export default function Home() {
                   <div className="service-icon">🌍</div>
                   <h3>Translation & Interpretation</h3>
                   <p>We translate and interpret documents in Spanish, Portuguese, and more — including hard-to-read handwriting or church records.</p>
+                  <button className="book">Book Now</button>
                 </a>
               </div>
 
@@ -176,6 +180,7 @@ export default function Home() {
                   <div className="service-icon">📁</div>
                   <h3>Digital Archive Setup</h3>
                   <p>We create simple, shareable folder systems and naming templates to keep your records clean, accessible, and future-proof.</p>
+                  <button className="book">Book Now</button>
                 </a>
               </div>
             </div>
