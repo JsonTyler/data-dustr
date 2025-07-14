@@ -287,11 +287,11 @@ export default function Home() {
             {[
               {
                 q: "What kind of records can you find?",
-                a: "We locate birth, marriage, death, immigration, and church records—plus any supporting documentation for citizenship or genealogy work.",
+                a: "We locate birth, marriage, death, immigration, and church records—plus any supporting documentation for citizenship help or genealogy work.",
               },
               {
                 q: "Can you help me apply for dual citizenship?",
-                a: "Yes. We help you gather and organize the records you need for your application—structured, translated (if needed), and ready to submit.",
+                a: "Yes and no. We can help you gather and organize the records you need for your application. We can't make the appointment, go with you, or act as a certified government translator.",
               },
               {
                 q: "What if I only have part of the information?",
@@ -299,11 +299,11 @@ export default function Home() {
               },
               {
                 q: "How do I get started?",
-                a: "Just send a message through the contact form. We’ll talk through your goals and give you a personalized quote.",
+                a: "You have options! You can book a free consult, purchase a service directly from the cards above, or fill out the contact form to ask a question. Whatever works best for you.",
               },
               {
                 q: "Do you offer ongoing help?",
-                a: "Yes. We offer optional ongoing support to help you maintain a clean and organized digital archive, even after the initial setup.",
+                a: "Absolutely. Whether you're adding new discoveries to your family tree or keeping your records organized over time, we're here to support you beyond the initial setup — as much or as little as you need.",
               },
             ].map(({ q, a }, i) => (
               <details key={i} className="faq-item">
