@@ -160,6 +160,7 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-decoration: none;
   color: white;
+  position: relative;
 }
 
 .service-card:hover {
@@ -180,12 +181,7 @@ footer {
   font-weight: 600;
   margin: 0.75rem 0 0.5rem;
   color: #ffffff;
-  transition: color 0.2s ease;
   text-decoration: none;
-}
-
-.service-card:hover h3 {
-  color: #ff5c5c;
 }
 
 .service-icon {
@@ -203,6 +199,39 @@ footer {
 
 .service-card button.book:hover {
   background-color: black;
+}
+
+.price-tag {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background-color: #46c46c;
+  color: #520000;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  box-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.3);
+  z-index: 1;
+  opacity: 1;
+}
+
+.book {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #fff;
+  color: #c0392b;
+  border: 2px solid #c0392b;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.book:hover {
+  background-color: #c0392b;
   color: white;
 }
 

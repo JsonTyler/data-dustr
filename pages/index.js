@@ -2,8 +2,18 @@ import { useEffect, useState } from "react";
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import dynamic from 'next/dynamic';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendarDays } from '@fortawesome/free-regular-svg-icons';
+
 
 export default function Home() {
+  const FontAwesomeIcon = dynamic(() =>
+    import('@fortawesome/react-fontawesome').then(mod => mod.FontAwesomeIcon),
+    { ssr: false }
+  );
+
+  
   const [toastVisible, setToastVisible] = useState(false);
 
   useEffect(() => {
@@ -141,46 +151,51 @@ export default function Home() {
             <div className="row justify-content-center g-4 mt-4">
               <div className="col-12 col-sm-6 col-lg-4 d-flex">
                 <a href="/record-request" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="price-tag">From $45</div>
                   <div className="service-icon">🔎</div>
                   <h3>Genealogy Record Search</h3>
                   <p>We locate historical birth, marriage, baptism, census, and immigration records using national and international archives.</p>
-                  <button className="book">Book Now</button>
+                  <button className="book"><FontAwesomeIcon icon={faCalendarDays} /> Book Now</button>
                 </a>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-4 d-flex">
                 <a href="/tree-setup" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="price-tag">From $60</div>
                   <div className="service-icon">🌳</div>
                   <h3>Family Tree Building</h3>
                   <p>Starting from what you know, we build or expand your family tree with sourced records and clear connections — no guesswork.</p>
-                  <button className="book">Book Now</button>
+                  <button className="book"><FontAwesomeIcon icon={faCalendarDays} /> Book Now</button>
                 </a>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-4 d-flex">
                 <a href="/citizenship-prep" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="price-tag">From $55</div>
                   <div className="service-icon">🛂</div>
                   <h3>Citizenship Paperwork Prep</h3>
                   <p>We organize, format, and explain the documents you’ll need for dual citizenship applications — so nothing’s missing at your consulate.</p>
-                  <button className="book">Book Now</button>
+                  <button className="book"><FontAwesomeIcon icon={faCalendarDays} /> Book Now</button>
                 </a>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-4 d-flex">
                 <a href="/translation" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="price-tag">From $30</div>
                   <div className="service-icon">🌍</div>
                   <h3>Translation & Interpretation</h3>
                   <p>We translate and interpret documents in Spanish, Portuguese, and more — including hard-to-read handwriting or church records.</p>
-                  <button className="book">Book Now</button>
+                  <button className="book"><FontAwesomeIcon icon={faCalendarDays} /> Book Now</button>
                 </a>
               </div>
 
               <div className="col-12 col-sm-6 col-lg-4 d-flex">
                 <a href="/digital-archive" className="service-card flex-fill text-decoration-none" rel="noopener noreferrer">
+                  <div className="price-tag">From $50</div>
                   <div className="service-icon">📁</div>
                   <h3>Digital Archive Setup</h3>
                   <p>We create simple, shareable folder systems and naming templates to keep your records clean, accessible, and future-proof.</p>
-                  <button className="book">Book Now</button>
+                  <button className="book"><FontAwesomeIcon icon={faCalendarDays} /> Book Now</button>
                 </a>
               </div>
             </div>
