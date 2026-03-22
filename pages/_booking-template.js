@@ -1,12 +1,17 @@
 import Head from "next/head";
 import Header from "@components/Header";
+import { siteConfig } from "@/lib/siteConfig";
 
-export default function Book() {
+/**
+ * Generic Booking Page Template
+ * Used for: /file-organization, /email-cleanup, /business-data, /declutter, /systems
+ */
+export default function BookingPage({ title, description, bookingUrl }) {
   return (
     <>
       <Head>
-        <title>Book an appointment – datadustr</title>
-        <meta name="description" content="Book a digital archive request with datadustr." />
+        <title>{title} Booking – {siteConfig.name}</title>
+        <meta name="description" content={description} />
       </Head>
 
       <div style={{
@@ -34,10 +39,10 @@ export default function Book() {
               borderRadius: "10px",
             }}>
               <h3 style={{ textAlign: "center", marginBottom: "1.5rem", color: "#000" }}>
-                Services
+                {title}
               </h3>
               <iframe
-                src="https://tidycal.com/datadustr/digital-archive"
+                src={bookingUrl}
                 width="100%"
                 height="1200"
                 frameBorder="0"
@@ -46,7 +51,7 @@ export default function Book() {
                   border: "none",
                   minHeight: "500px"
                 }}
-                title="TidyCal Booking"
+                title="Booking Calendar"
               />
             </div>
           </section>

@@ -2,5 +2,13 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "local>netlify-templates/renovate-config"
+  ],
+  "schedule": ["before 6am on monday"],
+  "packageRules": [
+    {
+      "groupName": "all non-major deps",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
   ]
 }

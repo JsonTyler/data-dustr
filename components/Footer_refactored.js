@@ -1,21 +1,15 @@
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
 import styles from './Footer.module.css';
 import { useRouter } from 'next/router';
-
-const FontAwesomeIcon = dynamic(() =>
-  import('@fortawesome/react-fontawesome').then(mod => mod.FontAwesomeIcon),
-  { ssr: false }
-);
+import Link from 'next/link';
+import { footerContent, footerLinks } from "@/lib/content";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function Footer() {
   const router = useRouter();
-  // Note: Booking pages (like /systems, /file-organization) SHOULD show footer below the calendar
-  // Only hide footer on pages where there's a conflict or old routes
-  const hideOnPages = ['/record-request', '/translation', '/tree-setup', '/citizenship-prep', '/digital-archive'];
   const [toastVisible, setToastVisible] = useState(false);
 
-  if (hideOnPages.includes(router.pathname)) {
+  if (footerContent.hideOnPages.includes(router.pathname)) {
     return null;
   }
 
@@ -25,7 +19,7 @@ export default function Footer() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch('/__newsletterForm.html', {
+      const res = await fetch(footerContent.newsletterFormAction, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(data).toString(),
@@ -48,19 +42,34 @@ export default function Footer() {
       <div className={styles.content}>
         <div className={styles.left}>
           <div className={styles.footerTagline}>
-            <span role="img" aria-label="tagline">✨</span> Clean data . Clear minds ✨
+            <span role="img" aria-label="clarity">{footerContent.taglineEmoji}</span> {footerContent.tagline}
           </div>
           <div className={styles.socials}>
-            <a href="#" aria-label="Google"><FontAwesomeIcon icon={['fab', 'google']} /></a>
-            <a href="https://www.instagram.com/datadustr/" target="_blank" aria-label="Instagram"><FontAwesomeIcon icon={['fab', 'instagram']} /></a>
-            <a href="#" aria-label="LinkedIn"><FontAwesomeIcon icon={['fab', 'linkedin']} /></a>
+            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              Instagram
+            </a>
           </div>
+        </div>
+
+        <div className={styles.footerLinks}>
+          {footerLinks.map((section) => (
+            <div key={section.title} className={styles.footerSection}>
+              <h4>{section.title}</h4>
+              <ul>
+                {section.links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         <form
           name="newsletter"
           method="POST"
-          action="/__newsletterForm.html"
+          action={footerContent.newsletterFormAction}
           data-netlify="true"
           netlify-honeypot="bot-field"
           className={styles.newsletter}
@@ -68,7 +77,7 @@ export default function Footer() {
         >
           <input type="hidden" name="form-name" value="newsletter" />
           <p hidden>
-            <label>Don’t fill this out: <input name="bot-field" /></label>
+            <label>Don't fill this out: <input name="bot-field" /></label>
           </p>
 
           <label htmlFor="email">Stay updated</label>
@@ -80,7 +89,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottomRow}>
-        © 2026 DataDustr · <a href="/privacy" aria-label="privacy nav link" style={{ color: '#BE261C', textDecoration: 'none', fontWeight: 'bold' }}>Privacy</a>
+        © {new Date().getFullYear()} {siteConfig.name} · <Link href="/privacy">Privacy</Link>
       </div>
 
       {toastVisible && (

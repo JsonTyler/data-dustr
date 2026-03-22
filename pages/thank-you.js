@@ -20,7 +20,7 @@ export default function ThankYou() {
             A confirmation email is on its way, and I’m looking forward to helping you soon.
           </p>
           <p style={{ fontSize: "1rem", color: "#999" }}>
-            If you have any documents, family details, or questions to share beforehand, feel free to reply to the confirmation email.
+            If you have any documents, details, or questions to share beforehand, feel free to reply to the confirmation email.
           </p>
         </section>
       </main>

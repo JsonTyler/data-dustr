@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../lib/fontawesome';
 import '@styles/globals.css';
 import { useEffect } from 'react';
-import Head from 'next/head'; // ✅ Add this
+import Head from 'next/head';
 import UnderConstructionOverlay from '../components/UnderConstructionOverlay';
 import Footer from '../components/Footer';
 

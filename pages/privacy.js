@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
       </h1>
 
       <p>
-        You’re trusting us with your family’s story, and that trust matters. This page explains what data we collect, how we use it, and what stays between us (hint: most of it).
+        You’re trusting us with your files, data, business, and that trust matters. This page explains what data we collect, how we use it, and what stays between us (hint: most of it).
       </p>
 
       <hr style={{ border: "none", height: "2px", backgroundColor: "#BE261C", margin: "2rem 0" }} />

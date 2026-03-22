@@ -1,13 +1,16 @@
 import Head from "next/head";
 import Header from "@components/Header";
 import { siteConfig } from "@/lib/siteConfig";
+import { services } from "@/lib/content";
 
-export default function Consult() {
+export default function FileOrganization() {
+  const service = services.find(s => s.id === "digital-file-organization");
+  
   return (
     <>
       <Head>
-        <title>Book a Free Consultation – {siteConfig.name}</title>
-        <meta name="description" content="Book a free consultation with DataDustr to discuss your organization needs." />
+        <title>{service.title} – {siteConfig.name}</title>
+        <meta name="description" content={service.description} />
       </Head>
 
       <Header />
@@ -20,7 +23,7 @@ export default function Consult() {
             padding: "2rem 1rem",
           }}>
             <h3 style={{ textAlign: "center", marginBottom: "1.5rem", color: "#000" }}>
-              Book a Free Consultation
+              {service.title}
             </h3>
             <div style={{
               background: "#fff",
@@ -29,7 +32,7 @@ export default function Consult() {
               boxShadow: "0 2px 8px rgba(0,0,0,0.1)"
             }}>
               <iframe
-                src={siteConfig.booking.consult}
+                src={siteConfig.booking.fileOrganization}
                 width="100%"
                 height="1200"
                 frameBorder="0"

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from './Header.module.css';
+import { headerNav } from "@/lib/content";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +16,11 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logoLink}>
-          <img src="/datadustrWhitePlainSvg.svg" alt="Datadustr logo" className={styles.logo} />
+          <img 
+            src={siteConfig.logo.white} 
+            alt={`${siteConfig.name} logo`} 
+            className={styles.logo} 
+          />
         </Link>
 
         <button
@@ -26,13 +32,16 @@ export default function Header() {
         </button>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`}>
-          <Link href={scrollLink("top")} aria-label="home menu link">Home</Link>
-          <Link href={scrollLink("services")} aria-label="services menu link">Genealogy Services</Link>
-          <Link href={scrollLink("process")} aria-label="process menu link">How It Works</Link>
-          <Link href={scrollLink("about")} aria-label="about menu link">About + My Story</Link>
-          <Link href={scrollLink("faq")} aria-label="faq menu link">FAQ</Link>
-          <Link href={scrollLink("testimonials")} aria-label="testimonials menu link">Testimonials</Link>
-          <Link href={scrollLink("contact")} className={styles.cta} aria-label="contact">Get Started</Link>
+          {headerNav.map((link) => (
+            <Link
+              key={link.anchor}
+              href={scrollLink(link.anchor)}
+              className={link.isCta ? styles.cta : ''}
+              aria-label={`${link.label} menu link`}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
       </div>
     </header>
