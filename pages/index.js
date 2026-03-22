@@ -133,7 +133,7 @@ export default function Home() {
         {/* Services Section */}
         <section id="services" className="section-services">
           <div className="services-container container">
-            <h2 className="section-title">Genealogy Services</h2>
+            <h2 className="section-title">Data Organization Services</h2>
 
             <div className="row justify-content-center g-4 mt-4">
               {services.map((service) => (
